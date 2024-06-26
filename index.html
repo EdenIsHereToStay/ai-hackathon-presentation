@@ -6,22 +6,29 @@
     <title>What project should we choose?</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
         .reveal .slides section {
             top: 0 !important;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
-            box-sizing: border-box;
         }
-        .reveal h1 { font-size: 1.5em; margin-bottom: 0.5em; }
-        .reveal h2 { font-size: 1.3em; margin-bottom: 0.5em; }
-        .reveal h3 { font-size: 1.1em; margin-bottom: 0.5em; }
-        .reveal p, .reveal ul { font-size: 0.9em; line-height: 1.3; margin-bottom: 0.5em; }
+        .reveal .slides section > * {
+            margin-bottom: 0.5em;
+        }
+        .reveal h1 { font-size: 1.5em; color: #1a73e8; }
+        .reveal h2 { font-size: 1.3em; color: #1a73e8; }
+        .reveal ul { 
+            display: inline-block; 
+            text-align: left; 
+            margin: 0;
+            padding-left: 1em;
+        }
+        .reveal ul li {
+            margin-bottom: 0.5em;
+            font-size: 0.9em;
+        }
         .tag {
             background-color: #e8f0fe;
             color: #1a73e8;
@@ -29,16 +36,7 @@
             border-radius: 10px;
             display: inline-block;
             margin-right: 5px;
-            font-size: 0.6em;
-        }
-        .reveal ul {
-            display: inline-block;
-            text-align: left;
-            margin: 0;
-            padding-left: 1em;
-        }
-        .reveal ul li {
-            margin-bottom: 5px;
+            font-size: 0.7em;
         }
     </style>
 </head>
@@ -47,7 +45,7 @@
         <div class="slides">
             <section>
                 <h1>What project should we choose?</h1>
-                <h3>GDG Central Florida Hackathon</h3>
+                <h2>GDG Central Florida Hackathon</h2>
                 <p>
                     <span class="tag">#IOExtendedHackathon</span>
                     <span class="tag">#BuildWithAI</span>
@@ -56,50 +54,50 @@
             </section>
 
             <section>
-                <h2>Project 1: 3D Super Tic Tac Toe</h2>
+                <h2>1: 3D Super Tic Tac Toe</h2>
                 <ul>
-                    <li>3D game with AI and AR capabilities</li>
+                    <li>3D game with AI and AR</li>
                     <li>Multiplayer support</li>
-                    <li>Blend of fun and technology</li>
-                    <li>Challenge: Balancing simplicity and innovation</li>
+                    <li>Fun meets technology</li>
+                    <li>Challenge: Balance simplicity and innovation</li>
                 </ul>
             </section>
 
             <section>
-                <h2>Project 2: AiSchool Ecosystem</h2>
+                <h2>2: AiSchool Ecosystem</h2>
                 <ul>
-                    <li>AI-driven platform for K-12 education</li>
-                    <li>Personalized learning experiences</li>
-                    <li>Potential to revolutionize education</li>
-                    <li>Challenge: Creating adaptive AI and engaging content</li>
+                    <li>AI-driven K-12 education platform</li>
+                    <li>Personalized learning</li>
+                    <li>Revolutionize education</li>
+                    <li>Challenge: Adaptive AI, engaging content</li>
                 </ul>
             </section>
 
             <section>
-                <h2>Project 3: TheRadio.Ai</h2>
+                <h2>3: TheRadio.Ai</h2>
                 <ul>
                     <li>AI-managed radio stations</li>
-                    <li>100+ songs, 24+ artists on flagship station</li>
-                    <li>Merges music and AI</li>
-                    <li>Challenge: Scaling and AI integration</li>
+                    <li>100+ songs, 24+ artists</li>
+                    <li>Music meets AI</li>
+                    <li>Challenge: Scaling, AI integration</li>
                 </ul>
             </section>
 
             <section>
-                <h2>Project 4: CORE.ASi</h2>
+                <h2>4: CORE.ASi</h2>
                 <ul>
-                    <li>Open-source AI core for offline model building</li>
-                    <li>Connect AI models through intermediate architecture</li>
+                    <li>Open-source AI core</li>
+                    <li>Offline model building</li>
                     <li>Democratize AI technology</li>
-                    <li>Challenge: Developing robust, adaptable application</li>
+                    <li>Challenge: Robust, adaptable application</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Next Steps</h2>
                 <ul>
-                    <li>Consider project potential and challenges</li>
-                    <li>Share your thoughts and feedback</li>
+                    <li>Evaluate project potential and challenges</li>
+                    <li>Share your thoughts</li>
                     <li>Join us in creating something amazing!</li>
                     <li><a href="https://forms.gle/S8XjRFNWVNkGHLpF6">Sign up to get involved</a></li>
                 </ul>
@@ -112,29 +110,13 @@
         Reveal.initialize({
             hash: true,
             slideNumber: true,
-            transition: 'slide',
-            width: '100%',
-            height: '100%',
-            margin: 0,
+            transition: 'none',
+            width: "100%",
+            height: "100%",
+            margin: 0.1,
             minScale: 0.2,
-            maxScale: 2
+            maxScale: 1.5
         });
-
-        function adjustFontSize() {
-            const slides = document.querySelectorAll('.reveal .slides section');
-            slides.forEach(slide => {
-                let fontSize = 24;
-                slide.style.fontSize = fontSize + 'px';
-                while (slide.scrollHeight > slide.offsetHeight && fontSize > 8) {
-                    fontSize--;
-                    slide.style.fontSize = fontSize + 'px';
-                }
-            });
-        }
-
-        window.addEventListener('load', adjustFontSize);
-        window.addEventListener('resize', adjustFontSize);
-        Reveal.addEventListener('slidechanged', adjustFontSize);
     </script>
 </body>
 </html>
